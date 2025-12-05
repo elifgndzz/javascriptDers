@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Regex Desenleri</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+ let pattern1=/merhaba/;
+ document.writeln("Metinde'merhaba'kelimesini arama:");
+ document.writeln(pattern1.test("merhaba dünya"));
+ document.writeln("<br>");
+
+  let pattern2=/merhaba/;
+  document.writeln("Metinde büyük küçük harf duyarlılığı kaldırma:");
+  document.writeln(pattern2.test("merhaba dünya"));
+  document.writeln("<br>");
+
+
+
+let pattern3=/el/gi;
+let metin="Elma el ele el ele";
+    document.writeln("<u>Elma el ele el ele</u> metinde bulunan <u>el</u> ifadesini bulma:" );
+    document.writeln(metin.match(pattern3));
+    document.writeln("<br>");
+
+
+
+    let pattern4=/\d/;
+    document.writeln("Bugün 05 Aralık metinde rakam bulma:");
+    document.writeln(pattern4.test("Bugün 05 Aralık "));
+    document.writeln("<br>");
+
+    let pattern5=/\d/;
+    document.writeln("a1b2b3 metninde rakam bulma:");
+    document.writeln("a1b2b3".match(pattern5));
+    document.writeln("<br>");
+
+
+
+
+
+
+
+
+</script>
