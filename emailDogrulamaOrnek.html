@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mail Doğrulama</title>
+</head>
+<body>
+    <h2>E-mail Doğrulama</h2>
+    <input type="text" id="emailGiris"placeholder="abc@site.com">
+    <button onclick="dogrula()">Doğrula</button>
+    <div id="sonuc"></div>
+</body>
+</html>
+  <script>
+    function dogrula() {
+          let email=document.getElementById('emailGiris').value;
+          let sonucDiv=document.getElementById('sonuc');
+
+          let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          if (pattern.test(email))
+      {
+         sonucDiv.innerHTML='<span class="gecerli">Geçerli Mail</span>';
+         sonucDiv.innerHTML+='<br>Kullanıcı:'+email.split('@')[0];
+         sonucDiv.innerHTML+='<br> Domain:'+email.split('@')[1];
+      }
+    else
+    {
+         sonucDiv.innerHTML='<span class="gecersiz">Geçersiz Email</span>';
+         sonucDiv.innerHTML+='<br>Örnek: abc@site.com';
+    }
+
+
+    }
+</script>
