@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uygulama</title>
+
+</head>
+
+<body>
+     
+    <h1>Javascript Uygulamaları</h1>
+    <button onclick="begen()">Beğen</button>
+    <button onclick="yorum()">Yorum Ekle</button>
+    <p>Beğeni: <span id="begeniSayisi">0</span></p>
+    <div id="yorumlar"></div>
+
+</body>
+
+<script>
+
+    let begeniSayisi=0;
+    function begen()
+    {
+        begeniSayisi++;
+        document.getElementById("begeniSayisi").textContent=begeniSayisi;
+    }
+
+    function yorum()
+    {
+        let yorum=prompt("Yorumunuzu Yazınız...");
+        let yorumlarDiv=document.getElementById("yorumlar");
+        yorumlarDiv.innerHTML+="<p>Yorumunuz: "+yorum+"</p>";
+    }
+
+</script>
+
+</html>
