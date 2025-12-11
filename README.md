@@ -9,7 +9,7 @@ Ben bir yazılım geliştirme öğrencisiyim ve web tasarımı dünyasının ön
 🚀 Hedefim bu alanda ilerlemek ve proje üretmek.
 <h3>Sertifikalar📝 </h3>
 <p><b>INNOVATE 360-Katılımmcı</b></p>
-<p>İstanbul Üniversitesi,2025</p>
+İstanbul Üniversitesi,2025
 
 📫Bana ulaşmak istersen:  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)] (https://www.linkedin.com/in/elif-g%C3%BCnd%C3%BCz-29102a336)
