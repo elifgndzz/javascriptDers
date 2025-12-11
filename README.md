@@ -8,7 +8,7 @@ Ben bir yazılım geliştirme öğrencisiyim ve web tasarımı dünyasının ön
 
 🚀 Hedefim bu alanda ilerlemek ve proje üretmek.
 <h3>Sertifikalar📝 </h3>
-<b>INNOVATE 360-Katılımmcı</b><br>
+<b>INNOVATE 360-Katılımcı</b><br>
 İstanbul Üniversitesi,2025<br><br>
 
 📫Bana ulaşmak istersen:  
