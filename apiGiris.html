@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Entegrasyonu</title>
+
+</head>
+<body>
+    <h1>API'dan Gelen Blog Yazıları</h1>
+    <button id="fetch-button">Blog Yazılarını Getir</button>
+    <div id="gonderi-durumu">
+        <p>Butona Tıklayarak Verileri Yükleyin.</p>
+    </div>
+</body>
+<script>
+    const gonderiDurumu=document.getElementById('gonderi-durumu');
+    const fetchButton=document.getElementById('fetch-button');
+    const API_URL='https://jsonplaceholder.typicode.com/posts?_limit=10';
+    async function fetchPosts() {
+        gonderiDurumu.innerHTML='<h2>Veriler Yükleniyor. Lütfen Bekleyiniz.</h2>';
+        fetchButton.disabled=true;
+        try{
+            const response=await fetch(API_URL);
+            if(!response.ok)
+        {
+            throw new Error(`API HATASI! Durum Kodu: ${response.status}`);
+        }
+        const gonderi=await response.json();
+        displayPosts(gonderi);
+        }
+        catch(error)
+        {
+            console.error("İşlemde sorun oluştu: ", error);
+            gonderiDurumu.innerHTML=`<h2style="color:red"Yükleme Başarısız: ${error.message}</h2>`;
+        }     
+    }
+    function displayPosts(gonderi)
+    {
+        gonderiDurumu.innerHTML='';
+        let htmlContent='';
+        gonderi.forEach(gonderi=>{
+            htmlContent+=`
+            <div class="post">
+                <h3>${gonderi.title}</h3>
+                <p>${gonderi.body.substring(0,100)}...</p>
+                <hr></div>`;
+    });
+    gonderiDurumu.innerHTML=htmlContent;
+    }
+    fetchButton.addEventListener('click',fetchPosts);
+</script>
+</html>
